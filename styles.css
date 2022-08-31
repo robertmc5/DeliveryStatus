@@ -1,0 +1,191 @@
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Universal */
+* {
+  margin: 0;
+}
+
+body, html {
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+body {
+  background-image: url('images/ZigZag.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Main floating panel */
+.main-panel {
+  width: 87.2%;
+  max-width: 30rem;
+  min-width: 20rem;
+  height: 35.4375rem;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 40px 40px -20px #3C7B61;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+/* Main content - Inner div */
+.inner-container {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 8%;
+}
+
+.main-message {
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: #2F463D;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.addl-content {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.875rem;
+  color: #828282;
+  line-height: 1.86;
+}
+
+/* Item Selection */
+.dish-selection {
+  width: 100%;
+  background: #F0FFF5;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1.5rem;
+}
+
+.item-name-price {
+  width: 55%;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.item-name-price > h4 {
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: #2F463D;
+}
+
+.item-name-price > h5 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #7A8F85;
+  margin: 0.125rem;
+}
+
+.dish-selection > a {
+  padding-right: 1rem;
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #467A66;
+}
+
+.dish-selection > a:hover {
+  color: #DC143C;
+}
+
+/* Big button */
+.big-btn {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 3.125rem;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #FFFFFF;
+}
+
+.proceed-btn {
+  background-color: #46A67E;
+  box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: 0.25s ease opacity;
+}
+
+.inactive-btn {
+  background: #BDBDBD;
+  box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+}
+
+.proceed-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.25s ease opacity;
+}
+
+/* Bottom of Main floating panel */
+.page-ellipse {
+  position: absolute;
+  bottom: 2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 18%;
+  margin: auto;
+}
+
+.dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+}
+
+.dot.active {
+  background-color: #67BD99;
+}
+
+/* Small to medium devices */
+.desktop-panel {
+  display: none;
+}
+
+/* Large devices (laptops/desktops) */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-size: contain;
+  }
+  .main-panel {
+    height: 39.4375rem;
+  }
+  .active-panel {
+    z-index: 2;
+    margin: 0 -1rem;
+  }
+  .desktop-panel {
+    display: block;
+    height: 35.4375rem;
+  }
+  .large-icon {
+    width: 9.375rem;
+  }
+  .main-message {
+    padding: 1.5rem 1rem;
+    margin: auto;
+  }
+  .inactive-btn {
+    margin-top: 2.5rem;
+  }
+}
